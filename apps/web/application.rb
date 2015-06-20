@@ -1,4 +1,5 @@
 require 'lotus/helpers'
+require 'lotus/action/session'
 
 module Web
   class Application < Lotus::Application
@@ -183,8 +184,9 @@ module Web
       #
       # See: http://www.rubydoc.info/gems/lotus-controller#Configuration
       controller.prepare do
-        # include MyAuthentication # included in all the actions
-        # before :authenticate!    # run an authentication before callback
+        include Lotus::Action::Session
+        include AuthenticationHelper # included in all the actions
+        before :authenticate!    # run an authentication before callback
       end
 
       # Configure the code that will yield each time Web::View is included
