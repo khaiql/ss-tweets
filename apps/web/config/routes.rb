@@ -1,4 +1,6 @@
+post '/registrations', to: 'registrations#create'
+get '/registrations', to: 'registrations#new'
+
 get '/login', to: 'sessions#new'
-# Configure your routes here
-# See: http://www.rubydoc.info/gems/lotus-router/#Usage
+
 get '/', to: 'home#index'

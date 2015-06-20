@@ -187,6 +187,9 @@ module Web
         include Lotus::Action::Session
         include AuthenticationHelper # included in all the actions
         before :authenticate!    # run an authentication before callback
+        if ['development', 'test'].include? ENV['LOTUS_ENV']
+          require 'byebug'
+        end
       end
 
       # Configure the code that will yield each time Web::View is included

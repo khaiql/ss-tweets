@@ -3,6 +3,7 @@ ENV['LOTUS_ENV'] ||= 'test'
 
 require_relative '../config/environment'
 Lotus::Application.preload!
+require 'byebug'
 
 Dir[__dir__ + '/support/**/*.rb'].each { |f| require f }
 

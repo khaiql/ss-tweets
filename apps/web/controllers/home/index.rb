@@ -3,6 +3,7 @@ module Web::Controllers::Home
     include Web::Action
 
     def call(params)
+
     end
   end
 end
