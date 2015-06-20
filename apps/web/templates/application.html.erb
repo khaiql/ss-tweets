@@ -1,9 +1,44 @@
-<!doctype HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Web</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SS-Tweets</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/jumbotron-narrow.css" rel="stylesheet">
   </head>
+
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Sign in</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">SS Tweets</h3>
+      </div>
+
+      <%= yield %>
+
+      <footer class="footer">
+        <p>&copy; Silicon Straits Saigon - Khai Le 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src='/bootstrap/js/bootstrap.min.js'></script>
+    <%= content :javascripts %>
   </body>
 </html>
