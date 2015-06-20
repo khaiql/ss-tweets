@@ -1,5 +1,5 @@
 class User
   include Lotus::Entity
 
-  attr :email, :password, :id
+  attributes :id, :email, :password, :name
 end

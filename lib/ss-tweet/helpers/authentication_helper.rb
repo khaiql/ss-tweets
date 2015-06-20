@@ -1,8 +1,6 @@
 require 'lotus/action/session'
 
 module AuthenticationHelper
-
-
   def authenticate!
     if session[:user_id].nil? && !is_login_path
       redirect_to '/login'
