@@ -1,0 +1,146 @@
+GIT
+  remote: git://github.com/lotus/controller.git
+  revision: 9336277211e9978c06b5eb608c59110cee38f2e9
+  branch: 0.4.x
+  specs:
+    lotus-controller (0.4.4)
+      lotus-utils (~> 0.5)
+      lotus-validations (~> 0.3)
+      rack (~> 1.5)
+
+GIT
+  remote: git://github.com/lotus/helpers.git
+  revision: 26c2e17ea7bb22905d286ebdc6d6dd0a0c491bd1
+  branch: 0.2.x
+  specs:
+    lotus-helpers (0.2.0)
+      lotus-utils (~> 0.4)
+
+GIT
+  remote: git://github.com/lotus/router.git
+  revision: 069eca9997ff8824bb431c3d665e346a9b77d0b7
+  branch: 0.4.x
+  specs:
+    lotus-router (0.4.1)
+      http_router (~> 0.11)
+      lotus-utils (~> 0.5)
+
+GIT
+  remote: git://github.com/lotus/utils.git
+  revision: 86205913fd453b7f4be184e95b03ef995d2c2ce1
+  branch: 0.5.x
+  specs:
+    lotus-utils (0.5.0)
+
+GIT
+  remote: git://github.com/lotus/validations.git
+  revision: 21617beb8516a2f3fbf3118dd8395677516df2b3
+  branch: 0.3.x
+  specs:
+    lotus-validations (0.3.2)
+      lotus-utils (~> 0.4)
+
+GIT
+  remote: git://github.com/lotus/view.git
+  revision: c1196190f9b93ba1ac6c0395b26c3bc5809576ab
+  branch: 0.4.x
+  specs:
+    lotus-view (0.4.2)
+      lotus-utils (~> 0.5)
+      tilt (~> 2.0, >= 2.0.1)
+
+GIT
+  remote: https://github.com/khaiql/lotus.git
+  revision: edd719a9486bf0ffbfc3663af3c4dbdba95ac741
+  specs:
+    lotusrb (0.4.0)
+      dotenv (~> 2.0)
+      lotus-controller (~> 0.4, >= 0.4.4)
+      lotus-helpers (~> 0.2)
+      lotus-router (~> 0.4, >= 0.4.1)
+      lotus-utils (~> 0.5)
+      lotus-view (~> 0.4)
+      shotgun (~> 0.9)
+      thor (~> 0.19)
+
+GIT
+  remote: https://github.com/lotus/model
+  revision: 9f9ebbd1fefd99999b49674d82a1291e50526ba3
+  branch: 0.4.x
+  specs:
+    lotus-model (0.4.0)
+      lotus-utils (~> 0.5)
+      sequel (~> 4.9)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (5.0.0)
+      columnize (= 0.9.0)
+    capybara (2.4.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    columnize (0.9.0)
+    diff-lcs (1.2.5)
+    dotenv (2.0.2)
+    http_router (0.11.1)
+      rack (>= 1.0.0)
+      url_mount (~> 0.2.1)
+    mime-types (2.6.1)
+    mini_portile (0.6.2)
+    mysql2 (0.3.18)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
+    rack (1.6.4)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (10.4.2)
+    rspec (3.3.0)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+    rspec-core (3.3.1)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
+    sequel (4.23.0)
+    shotgun (0.9.1)
+      rack (>= 1.0)
+    slim (3.0.6)
+      temple (~> 0.7.3)
+      tilt (>= 1.3.3, < 2.1)
+    temple (0.7.6)
+    thor (0.19.1)
+    tilt (2.0.1)
+    url_mount (0.2.1)
+      rack
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  byebug
+  capybara
+  lotus-controller (~> 0.4)!
+  lotus-helpers (~> 0.2)!
+  lotus-model!
+  lotus-router (~> 0.4)!
+  lotus-utils (~> 0.5)!
+  lotus-validations (~> 0.3)!
+  lotus-view (~> 0.4)!
+  lotusrb (~> 0.4)!
+  mysql2
+  rake
+  rspec
+  slim
