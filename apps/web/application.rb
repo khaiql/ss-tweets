@@ -1,5 +1,4 @@
 require 'lotus/helpers'
-require 'lotus/action/session'
 
 module Web
   class Application < Lotus::Application
@@ -184,11 +183,18 @@ module Web
       #
       # See: http://www.rubydoc.info/gems/lotus-controller#Configuration
       controller.prepare do
-        include Lotus::Action::Session
         include AuthenticationHelper # included in all the actions
         before :authenticate!    # run an authentication before callback
         if ['development', 'test'].include? ENV['LOTUS_ENV']
           require 'byebug'
+        end
+
+        if ENV['LOTUS_ENV'] == 'test'
+          class_eval do
+            def verify_csrf_token?
+              false
+            end
+          end
         end
       end
 

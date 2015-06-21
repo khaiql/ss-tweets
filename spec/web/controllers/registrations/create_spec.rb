@@ -4,13 +4,11 @@ require_relative '../../../../apps/web/controllers/registrations/create'
 describe Web::Controllers::Registrations::Create do
   let(:action) { Web::Controllers::Registrations::Create.new }
 
-
   context 'with valid params' do
     let(:params) { Hash[sign_up: {email: 'khai.le@live.com', name: 'Khai',
                                   password: 'abc123',
                                   password_confirmation: 'abc123'}] }
     it 'redirect to login page' do
-      puts params
       response = action.call(params)
       puts response
       expect(response[0]).to eq 302

@@ -1,8 +1,6 @@
-require 'lotus/action/session'
-
 module AuthenticationHelper
   def authenticate!
-    if session[:user_id].nil? && !is_login_path && !is_registration_path
+    if should_redirect_to_login?
       redirect_to '/login'
     end
   end
@@ -15,11 +13,25 @@ module AuthenticationHelper
 
   private
 
+  def should_redirect_to_login?
+    !request_path.empty? && session[:user_id].nil? && !is_login_path &&
+    !is_registration_path
+  end
+
   def is_login_path
-    !!(request.path =~ /login|sessions/i)
+    !!(request_path =~ /login|sessions/i)
   end
 
   def is_registration_path
-    !!(request.path =~ /registrations/i)
+    !!(request_path =~ /registrations/i)
+  end
+
+  def request_path
+    path = request.path
+    if path.empty?
+      request = params["request"]
+      path = request["path"] if request
+    end
+    path
   end
 end

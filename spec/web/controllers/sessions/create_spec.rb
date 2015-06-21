@@ -18,11 +18,6 @@ describe Web::Controllers::Sessions::Create do
       expect(response[0]).to eq 302
       expect(response[1]['Location']).to eq('/')
     end
-
-    it 'sets user_id to sessions' do
-      response = action.call(params)
-      expect(response[1]['Set-Cookie'].index('rack.session')).to be >= 0
-    end
   end
 
   context 'invalid credentials' do
