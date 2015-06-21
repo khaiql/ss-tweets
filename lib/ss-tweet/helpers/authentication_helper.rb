@@ -16,7 +16,7 @@ module AuthenticationHelper
   private
 
   def is_login_path
-    !!(request.path =~ /login/i)
+    !!(request.path =~ /login|sessions/i)
   end
 
   def is_registration_path

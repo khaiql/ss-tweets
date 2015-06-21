@@ -1,3 +1,4 @@
+post '/sessions', to: 'sessions#create'
 post '/registrations', to: 'registrations#create'
 get '/registrations', to: 'registrations#new'
 
