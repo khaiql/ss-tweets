@@ -15,6 +15,8 @@ GEM
     columnize (0.9.0)
     diff-lcs (1.2.5)
     dotenv (2.0.2)
+    faker (1.4.3)
+      i18n (~> 0.5)
     ffi (1.9.9)
     formatador (0.2.5)
     guard (2.12.6)
@@ -35,6 +37,7 @@ GEM
     http_router (0.11.1)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
+    i18n (0.7.0)
     listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -126,6 +129,7 @@ DEPENDENCIES
   bundler
   byebug
   capybara
+  faker
   guard-rspec (~> 4.6.0)
   lotus-model
   lotusrb (~> 0.4)

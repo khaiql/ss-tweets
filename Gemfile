@@ -14,6 +14,7 @@ group :test do
   gem 'rspec'
   gem 'guard-rspec', '~> 4.6.0'
   gem 'capybara'
+  gem 'faker'
 end
 
 group :production do
