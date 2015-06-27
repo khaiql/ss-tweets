@@ -5,10 +5,12 @@ module Web::Views::Home
     def create_post_form
       form_for :post, '/posts' do
         div class: 'form-group' do
-          text_field 'content', class: 'form-control', id: 'post_content', placeholder: 'What do you think?'
+          text_area :content, nil, {class: 'form-control', id: 'post_content', placeholder: 'What do you think?', rows: '5'}
         end
 
-        submit 'Submit'
+        div class: 'text-right' do
+          submit 'Submit', class: 'btn btn-success'
+        end
       end
     end
   end

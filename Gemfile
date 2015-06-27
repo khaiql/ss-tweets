@@ -5,6 +5,7 @@ gem 'rake'
 
 gem 'lotusrb', '~> 0.4'
 gem 'lotus-model'
+gem 'lotus-helpers', git: 'https://github.com/khaiql/helpers.git', branch: 'text_area'
 
 gem 'mysql2'
 gem 'slim'
