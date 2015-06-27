@@ -37,5 +37,12 @@ describe 'visit home page' do
     it 'should have Logout on Nav bar' do
       expect(page).to have_content('Logout')
     end
+
+    it 'has post textarea' do
+      expect(page).to have_css('form #post_content')
+    end
+    it 'has submit button' do
+      expect(page).to have_css('form button[type=submit]')
+    end
   end
 end
