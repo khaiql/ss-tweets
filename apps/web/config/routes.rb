@@ -1,4 +1,4 @@
-get '/posts', to: 'posts#create'
+post '/posts', to: 'posts#create'
 delete '/sessions', to: 'sessions#destroy'
 get '/logout', to: 'sessions#destroy'
 post '/sessions', to: 'sessions#create'

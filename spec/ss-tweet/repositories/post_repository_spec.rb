@@ -40,4 +40,18 @@ RSpec.describe PostRepository do
       it_behaves_like 'invalid object'
     end
   end
+
+  describe '.posts_of_user' do
+    it 'returns all posts of user' do
+      subject.create(Post.new(author_id: user.id, content: Faker::Lorem.characters(100)))
+      subject.create(Post.new(author_id: user.id, content: Faker::Lorem.characters(100)))
+      expect(subject.posts_of_user(user.id).count).to eq(2)
+    end
+    it 'returns empty array if author_id does not exist' do
+      expect(subject.posts_of_user(0).count).to eq 0
+    end
+    it 'returns empty array if author does not create posts before' do
+      expect(subject.posts_of_user(user.id).count).to eq 0
+    end
+  end
 end

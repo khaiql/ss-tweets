@@ -1,6 +1,8 @@
 require 'features_helper'
 describe 'visit home page' do
   before do
+    UserRepository.clear
+    PostRepository.clear
     visit '/'
   end
 
@@ -43,6 +45,35 @@ describe 'visit home page' do
     end
     it 'has submit button' do
       expect(page).to have_css('form button[type=submit]')
+    end
+
+    describe 'posts list' do
+      it 'hash element with id is posts' do
+        expect(page).to have_css 'div#posts'
+      end
+      context 'user has posts' do
+        before do
+          PostRepository.create(Post.new(content: Faker::Lorem.characters(100), author_id: user.id))
+          visit '/'
+        end
+        it 'has element with class is post-item' do
+          expect(page).to have_css 'div#posts div.post-item'
+        end
+        it 'has author name element' do
+          expect(page).to have_css 'div#posts div.post-item .author'
+        end
+        it 'has timestamp element' do
+          expect(page).to have_css 'div#posts div.post-item .timestamp'
+        end
+        it 'has post content element' do
+          expect(page).to have_css 'div#posts div.post-item .content'
+        end
+      end
+      context 'user has no posts' do
+        it 'has content of #posts element is empty' do
+          expect(page).not_to have_css 'div#posts div.post-item'
+        end
+      end
     end
   end
 end

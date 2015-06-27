@@ -1,0 +1,8 @@
+== create_post_form
+
+#posts
+  - posts.each do |post|
+    .post-item
+      .author = post.author_name
+      .timestamp = post.updated_at
+      .content = post.content

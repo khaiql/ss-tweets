@@ -5,7 +5,7 @@ module Web::Views::Home
     def create_post_form
       form_for :post, '/posts' do
         div class: 'form-group' do
-          text_field 'Content', class: 'form-control', id: 'post_content', placeholder: 'What do you think?'
+          text_field 'content', class: 'form-control', id: 'post_content', placeholder: 'What do you think?'
         end
 
         submit 'Submit'

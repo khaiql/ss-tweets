@@ -17,13 +17,18 @@ describe Web::Controllers::Home::Index do
   end
 
   context 'signed in user' do
+    let(:user) { UserRepository.create(User.new(email: 'khai.le@live.com', password: '123', name: 'Khai'))}
     before do
-      allow(action).to receive(:session).and_return({user_id: 1})
+      allow(action).to receive(:session).and_return({user_id: user.id})
     end
     it 'returns 200 status code' do
       env = Rack::MockRequest.env_for('/', {})
       status, _, _ = action.call(env)
       expect(status).to eq(200)
+    end
+    it 'has posts instance variable' do
+      action.call(params)
+      expect(action.instance_variables.include?(:@posts)).to eq true
     end
   end
 
