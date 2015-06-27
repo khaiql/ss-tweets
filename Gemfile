@@ -12,6 +12,7 @@ gem 'byebug'
 
 group :test do
   gem 'rspec'
+  gem 'guard-rspec', '~> 4.6.0'
   gem 'capybara'
 end
 
