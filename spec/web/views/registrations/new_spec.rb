@@ -11,6 +11,4 @@ describe Web::Views::Registrations::New do
   it "exposes #sign_up" do
     expect(view.sign_up).to eq exposures.fetch(:sign_up)
   end
-
-
 end

@@ -1,4 +1,9 @@
 module AuthenticationHelper
+
+  def self.included(base)
+    base.expose :current_user
+  end
+
   def authenticate!
     if should_redirect_to_login?
       redirect_to '/login'
@@ -6,8 +11,10 @@ module AuthenticationHelper
   end
 
   def current_user
-    if session[:user_id]
-      UserRepository.find(session[:user_id])
+    @curent_user ||= begin
+      if session[:user_id]
+        UserRepository.find(session[:user_id])
+      end
     end
   end
 
@@ -19,7 +26,7 @@ module AuthenticationHelper
   end
 
   def is_login_path
-    !!(request_path =~ /login|sessions/i)
+    !!(request_path =~ /login|logout|sessions/i)
   end
 
   def is_registration_path
