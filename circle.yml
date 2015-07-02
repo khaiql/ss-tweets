@@ -9,7 +9,9 @@ machine:
 dependencies:
   pre:
     - rm -rf vendor/cache
+    - rm -rf .bundle
     - gem install bundler
+    - bundle update lotus-helpers
 
 test:
   pre:
