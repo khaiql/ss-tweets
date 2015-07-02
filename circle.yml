@@ -15,6 +15,6 @@ dependencies:
 
 test:
   pre:
-    - bundle exec LOTUS_ENV=test db migrate
+    - LOTUS_ENV=test lotus db prepare
   override:
     - bundle exec rspec
