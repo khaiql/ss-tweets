@@ -8,6 +8,7 @@ machine:
 
 dependencies:
   pre:
+    - rm -rf vendor/cache
     - gem install bundler
 
 test:
