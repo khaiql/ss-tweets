@@ -2,7 +2,7 @@ machine:
   timezone:
     America/Los_Angeles
   ruby:
-    version: 2.2.0p0
+    version: 2.2.0
   environment:
     DATABASE_URL: mysql2://ubuntu@127.0.0.1:3306/ss_tweet_test
 
