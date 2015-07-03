@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/khaiql/helpers.git
-  revision: a1b52565ac245687e544e942f2809d3b72924340
-  branch: text_area
+  revision: 183725a4b88c489bdc81ebc08764eb54e8447441
   specs:
     lotus-helpers (0.2.0)
       lotus-utils (~> 0.5)
