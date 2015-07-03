@@ -1,6 +1,4 @@
 machine:
-  timezone:
-    America/Los_Angeles
   ruby:
     version: 2.2.0
   environment:
@@ -10,6 +8,7 @@ dependencies:
   pre:
     - gem install bundler
     - bundle install
+    - bundle update lotus-helpers
 
 test:
   pre:
