@@ -4,14 +4,12 @@ machine:
   ruby:
     version: 2.2.0
   environment:
-    DATABASE_URL: mysql2://ubuntu@127.0.0.1:3306/ss_tweet_test
+    DATABASE_URL: mysql2://ubuntu@127.0.0.1:3306/circle_test
 
 dependencies:
   pre:
-    - rm -rf vendor/cache
-    - rm -rf .bundle
     - gem install bundler
-    - bundle update lotus-helpers
+    - bundle install
 
 test:
   pre:
