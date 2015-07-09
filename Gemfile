@@ -10,6 +10,7 @@ gem 'lotus-model'
 gem 'mysql2'
 gem 'slim'
 gem 'byebug'
+gem 'coveralls', require: false
 
 group :test do
   gem 'rspec'

@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 # Require this file for unit tests
 ENV['LOTUS_ENV'] ||= 'test'
 
