@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/khaiql/ss-tweets/badge.svg?branch=master&service=github)](https://coveralls.io/github/khaiql/ss-tweets?branch=master)
+
 # ss-tweets
 
 ## Setup
